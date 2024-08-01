@@ -81,8 +81,38 @@ body, html {
 /* Donation section */
 
 .donate-container {
-background-color: #023C61;
- 
+    background: linear-gradient(to right, rgb(27, 67, 105), rgb(58, 131, 179));
+    margin: 40px;
+    height: 200px;
+    
+}
+
+.donate-title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.donate-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.donation-button {
+    width: 300px;
+    padding: 5px;
+    font-size: 25px;
+    background-color: #023C61;
+    color: #fff;
+    border: 3px solid #88D5FB;
+    cursor: pointer;
+    
+}
+
+.donation-button:hover {
+    background-color: #f0a500;
+    color:#000000;
 }
 
 
