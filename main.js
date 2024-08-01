@@ -44,9 +44,9 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         return; 
     }
 
-
-    saveDataToGoogleSheet(email, phone, zip);
+    submitFormData(email, phone, zip);
 });
+
 
 function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -63,24 +63,23 @@ function validateZip(zip) {
     return re.test(String(zip));
 }
 
-function saveDataToGoogleSheet(email, phone, zip) {
-   
-    var url = 'https://script.google.com/macros/s/AKfycbzTtCydaCcR52yqMsmpe3uzMYOx1hfO56q_l8tW9h-sSy3mlCNYPe_DqzpIv-qaXBxQ/exec'; 
+function submitFormData(email, phone, zip) {
+    var formData = new FormData();
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('zip', zip);
 
-    fetch(url, {
+    fetch('https://script.google.com/macros/s/AKfycbzTtCydaCcR52yqMsmpe3uzMYOx1hfO56q_l8tW9h-sSy3mlCNYPe_DqzpIv-qaXBxQ/exec', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: `email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&zip=${encodeURIComponent(zip)}`
-    })
-    .then(response => {
-        console.log('Success:', response);
-        alert('Thank you for signing up!');
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error. Please try again.');
-    });
+        body: formData,
+        mode: 'no-cors'
+    }).then(response => response.text())
+      .then(responseText => {
+          console.log('Response:', responseText);
+          alert('Form submitted successfully!');
+      }).catch(error => {
+          console.error('Error:', error);
+          alert('There was an error submitting the form.');
+      });
 }
+
