@@ -8,21 +8,73 @@ body, html {
 /* Header section */
 
 .header {
-    background-color: #023C61;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to right, rgb(27, 67, 105), rgb(58, 131, 179));
+    padding: 10px 20px 20px;  
+   
     
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    margin-left: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    padding: 8px;
+    margin: 0 5px;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: #000000 1px 1px 1px;
+    text-transform: uppercase;
+    
+}
+
+.volunteer-button {
+    background-color:#f0a500;
+    
+}
+
+.donate-button {
+    color: #fff;
+    background-color:#e60000 ;
 }
 
 .logo {
     width: 150px;
 }
 
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.social-icon {
+    height: 50px;
+}
+
 .hero {
     background-image: url('/assets/hero.png');
+    height: 700px;
+    width: 100%;
+    background-size: cover;
 }
+
+
 
 
 
@@ -38,6 +90,30 @@ background-color: #023C61;
 
 /* Meet section */
 
+.about-container {
+    display: grid;
+}
+
+.meet-title {
+    color:#023C61;
+}
+
+.meet-headshot {
+    height: 200px;
+}
+
+.headshot-text {
+    background-color:#023C61;
+    padding: 10px;
+}
+
+.meet-profile {
+    color: #000000;
+}
+
+.group-photo {
+    height: 200px;
+}
 
 
 
