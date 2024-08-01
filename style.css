@@ -9,8 +9,13 @@ body, html {
 
 .header {
     background: linear-gradient(to right, rgb(27, 67, 105), rgb(58, 131, 179));
-    padding: 10px 20px 20px;    
+    padding: 10px 20px 20px; 
+    z-index: 100;  
+    position: sticky;
+    top: 0;
 }
+
+
 
 .header-container {
     display: flex;
@@ -47,9 +52,30 @@ body, html {
     
 }
 
+.volunteer-button:hover {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.volunteer-button:active {
+    background-color:#f0a500;
+    transform: translateY(4px);
+}
+
+
 .donate-button {
     color: #fff;
     background-color:#e60000 ;
+}
+
+.donate-button:hover {
+    background-color: #e60000;
+    color: #000000 ;
+}
+
+.donate-button:active {
+    background-color: #e60000;
+    transform: translateY(4px);
 }
 
 .logo {
@@ -217,8 +243,6 @@ body, html {
 
 .signup-form {
     width: 60%;
-
-
 }
 
 .input-field {
@@ -244,6 +268,17 @@ body, html {
     margin-top: 10px;
     font-family: "Oswald", sans-serif;
    font-size: 15px;
+}
+
+.submit-button:hover {
+    background-color: #023C61;
+    color:#fff;
+    border: 1px solid #fff;
+}
+
+.submit-button:active {
+    background-color: #023C61;
+    transform: translateY(4px);
 }
 
 @media (max-width: 768px) {
@@ -291,6 +326,11 @@ body, html {
     background-color: #f0a500;
     color:#000000;
     border: 3px solid #023C61;
+}
+
+.donation-button:active {
+    background-color: #f0a500;
+    transform: translateY(4px);
 }
 
 @media (max-width: 768px) {
@@ -356,10 +396,15 @@ body, html {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    transform: translateY(-10%);
+    transform: translateY(-10%);  
+}
+
+.text-snippet {
     font-size: 18px;
     font-family: "Barlow", sans-serif;
     font-weight: 300;
+    text-align: left;
+    padding: 5px;
     
 }
 
@@ -422,7 +467,6 @@ body, html {
 }
 
 
-
 /*Footer*/
 
 .footer {
@@ -450,10 +494,16 @@ body, html {
 
 .footer-notice {
     border: 1px solid #fff;
-    padding: 2px 40px;
+    padding: 0 40px;
     font-size: 14px;
     margin-bottom: 10px;
     
+}
+
+.privacy-notice {
+    display: flex;
+    margin: 5px;
+   
 }
 
 .privacy-link, .copyright {
@@ -464,6 +514,7 @@ body, html {
 
 .privacy-link {
     text-decoration:underline;
+    margin-right:10px;
 }
 
 @media (max-width: 768px) {
