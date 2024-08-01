@@ -75,19 +75,25 @@ body, html {
     background-image: url('/assets/hero.png') ;
     background-size: cover;
     background-position: center;
-    padding: 50px 0;
     color:#fff;
     text-align:left;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+  
 }
 
 .hero-container {
-    max-width: 300px;
-    margin: 10px 40px;
+    flex: 1; 
     padding: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: center; 
     align-items: flex-start;
-    background: linear-gradient(to right, rgb(0,75,132), rgb(95,129,120));
+    background: linear-gradient(45deg, rgb(0,75,132), rgb(95,129,120));
+    box-sizing: border-box; 
+    max-width: 450px; 
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
 }
 
 .hero-logo {
@@ -96,13 +102,13 @@ body, html {
 }
 
 .signup-form {
-    width: 100%;
+    width: 60%;
 
 
 }
 
 .input-field {
-    width: 100%;
+   width: 100%;
     padding: 8px;
     background-color: #427EA9;
     border: 1px solid #fff;
