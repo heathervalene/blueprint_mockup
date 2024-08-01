@@ -162,6 +162,8 @@ body, html {
     box-sizing: border-box; 
     max-width: 450px; 
     clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-logo {
@@ -174,18 +176,40 @@ body, html {
     margin: 10px 0 0;
 }
 
+.mobile-only-hero-image {
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .mobile-only-hero-image {
+        display: block;
+        width: 100%;
+    }
+
+    .mobile-hero-candidate-image {
+        max-width: 100%;
+        display: block;
+    }
+
     .hero-container {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         max-width: 100%;
-        padding: 30px;
+       padding: 40px;
+        
+       
+       
     }
     .hero-text {
         font-size: 20px;
         text-align: center;
     }
     .hero-logo {
-        width: 150px;
+        display: none;
     }
 }
 
@@ -388,7 +412,12 @@ body, html {
     .headshot-text {
         margin: 20px;
         padding: 20px;
-        margin-top:30px;
+    
+    }
+
+    .meet-profile {
+        margin: 0 20px;
+        font-size: 16px;
     }
 }
 
