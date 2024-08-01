@@ -9,9 +9,7 @@ body, html {
 
 .header {
     background: linear-gradient(to right, rgb(27, 67, 105), rgb(58, 131, 179));
-    padding: 10px 20px 20px;  
-   
-    
+    padding: 10px 20px 20px;    
 }
 
 .header-container {
@@ -31,7 +29,7 @@ body, html {
     align-items: center;
 }
 
-.nav-button {
+.desktop-nav-button {
     padding: 8px;
     margin: 0 5px;
     border:none;
@@ -67,6 +65,76 @@ body, html {
 .social-icon {
     height: 50px;
 }
+
+
+.mobile-nav {
+    display: none; 
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(27, 67, 105);
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    z-index: 1000; 
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/*hamburger menu */
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+    }
+
+    .desktop-social-icons {
+        display: none;
+    }
+
+    .mobile-nav-link {
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mobile-nav-link.volunteer-button {
+        background-color: #f0a500;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .mobile-nav-link.donate-button {
+        background-color: #e60000;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .social-icons.mobile-social-icons {
+        justify-content: space-around;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.mobile-nav.open {
+    display: flex; 
+}
+
+
 
 /* Hero section */
 
@@ -160,10 +228,6 @@ body, html {
     }
 }
 
-
-
-
-
 /* Donation section */
 
 .donate-container {
@@ -219,7 +283,6 @@ body, html {
         font-size: 20px;
     }
 }
-
 
 /* Meet section */
 
