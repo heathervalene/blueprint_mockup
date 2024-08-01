@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+/* Header section */
+
+.header {
+    background-color: #023C61;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo {
+    width: 150px;
+}
+
+.hero {
+    background-image: url('/assets/hero.png');
+}
+
+
+
+/* Donation section */
+
+.donate-container {
+background-color: #023C61;
+ 
+}
+
+
+
+
+/* Meet section */
+
+
+
+
+/*Footer*/
+
+.footer {
+    background-color: #023C61;
+}
