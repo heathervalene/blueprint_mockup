@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Oswald", sans-serif;
     color: #fff;
 }
 
@@ -23,7 +23,6 @@ body, html {
 
 .logo {
     width: 150px;
-    
     margin-left: 20px;
 }
 
@@ -38,11 +37,12 @@ body, html {
     border:none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 10px;
-    box-shadow: #000000 1px 1px 1px;
+    font-size: 14px;
+    width: 100px;
     text-transform: uppercase;
-    
+    font-family: "Oswald", sans-serif;
 }
+
 
 .volunteer-button {
     background-color:#f0a500;
@@ -101,6 +101,28 @@ body, html {
    
 }
 
+.hero-text {
+    font-size: 30px;
+    margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        max-width: 100%;
+        padding: 30px;
+    }
+    .hero-text {
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero-logo {
+        width: 150px;
+    }
+}
+
+/* Form */
+
 .signup-form {
     width: 60%;
 
@@ -113,7 +135,10 @@ body, html {
     background-color: #427EA9;
     border: 1px solid #fff;
     margin: 5px 0;
-    color: #fff;
+}
+
+.input-field::placeholder {
+    color: #fff; 
 }
 
 .submit-button {
@@ -125,6 +150,14 @@ body, html {
     color:#023C61;
     cursor: pointer;
     margin-top: 10px;
+    font-family: "Oswald", sans-serif;
+   font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .signup-form {
+        width: 100%;
+    }
 }
 
 
@@ -136,13 +169,14 @@ body, html {
 .donate-container {
     background: linear-gradient(to right, rgb(27, 67, 105), rgb(58, 131, 179));
     margin: 40px;
-    height: 200px;
+    height: 250px;
     
 }
 
 .donate-title {
     text-align: center;
-    padding-top: 10px;
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 .donate-buttons {
@@ -160,6 +194,8 @@ body, html {
     color: #fff;
     border: 3px solid #88D5FB;
     cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
     
 }
 
@@ -169,6 +205,20 @@ body, html {
     border: 3px solid #023C61;
 }
 
+@media (max-width: 768px) {
+    .donate-container {
+       margin: 20px;
+       height: auto;
+       padding: 20px;
+    }
+    .donate-title {
+        font-size: 18px;
+    }
+    .donation-button {
+        width: 100%;
+        font-size: 20px;
+    }
+}
 
 
 /* Meet section */
@@ -180,6 +230,7 @@ body, html {
 .meet-title {
     margin-left: 20px;
     color:#023C61;
+    font-size: 30px;
 }
 
 .meet-content {
@@ -219,7 +270,9 @@ body, html {
     z-index: 1;
     overflow: hidden;
     transform: translateY(-10%);
-    font-size: 12px;
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
     
 }
 
@@ -227,8 +280,11 @@ body, html {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     text-align: justify;
-    margin-top: 20px;
+    margin: 20px;
     color:#000000;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .meet-group-photo {
@@ -237,7 +293,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:20px;
+    margin:20px;
 }
 
 .group-photo {
@@ -245,6 +301,13 @@ body, html {
 }
 
 @media (max-width: 768px) {
+    .about-container {
+        margin: 20px;
+    }
+
+    .meet-title {
+        text-align: center;
+    }
     .meet-content {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -258,6 +321,12 @@ body, html {
     .headshot-text, .meet-group-photo {
         text-align: center;
     }
+
+    .headshot-text {
+        margin: 20px;
+        padding: 20px;
+        margin-top:30px;
+    }
 }
 
 
@@ -269,6 +338,12 @@ body, html {
     color:#fff;
     padding: 40px;
   
+}
+
+.footer-logo {
+    width: 150px;
+    margin-top: 20px;
+ 
 }
 
 .footer-container {
@@ -284,13 +359,14 @@ body, html {
 .footer-notice {
     border: 1px solid #fff;
     padding: 2px 40px;
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 10px;
+    
 }
 
 .privacy-link, .copyright {
     margin: 0;
-    font-size: 10px;
+    font-size: 14px;
     color: #fff;
 }
 
@@ -298,6 +374,22 @@ body, html {
     text-decoration:underline;
 }
 
+@media (max-width: 768px) {
+    .footer-container {
+        align-items: center;
+    }
+    .footer-logo {
+        width: 100px;
+        margin: 10px 100px;
+    }
+    .footer-notice {
+        margin-top:10px;
+        padding: 2px 20px;
+    }
+    .privacy-link, .copyright {
+        font-size: 12px;
+    }
+}
 
 
 
