@@ -23,6 +23,7 @@ body, html {
 
 .logo {
     width: 150px;
+    
     margin-left: 20px;
 }
 
@@ -113,8 +114,8 @@ body, html {
 .donation-button:hover {
     background-color: #f0a500;
     color:#000000;
+    border: 3px solid #023C61
 }
-
 
 
 
@@ -122,6 +123,7 @@ body, html {
 
 .about-container {
     display: grid;
+    margin: 50px;
 }
 
 .meet-title {
@@ -151,4 +153,43 @@ body, html {
 
 .footer {
     background-color: #023C61;
+    color:#fff;
+    padding: 40px;
+  
 }
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 auto;
+    
+}
+
+.footer-notice {
+    border: 1px solid #fff;
+    padding: 2px 40px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.privacy-link, .copyright {
+    margin: 0;
+    font-size: 10px;
+    color: #fff;
+}
+
+.privacy-link {
+    text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+
