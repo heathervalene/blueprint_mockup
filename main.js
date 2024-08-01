@@ -69,7 +69,7 @@ function submitFormData(email, phone, zip) {
     formData.append('phone', phone);
     formData.append('zip', zip);
 
-    fetch('https://script.google.com/macros/s/AKfycbzTtCydaCcR52yqMsmpe3uzMYOx1hfO56q_l8tW9h-sSy3mlCNYPe_DqzpIv-qaXBxQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyZLsLuCWQAZ2rcdhtKXry3KeNzBCPlk0x-NGamN2wXevCDp5KjIvJTiBS_BuQ2FZBq/exec', {
         method: 'POST',
         body: formData,
         mode: 'no-cors'
