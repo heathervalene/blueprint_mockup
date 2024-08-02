@@ -75,10 +75,8 @@ function submitFormData(email, phone, zip) {
         mode: 'no-cors'
     }).then(response => response.text())
       .then(responseText => {
-          console.log('Response:', responseText);
           alert('Form submitted successfully!');
       }).catch(error => {
-          console.error('Error:', error);
           alert('There was an error submitting the form.');
       });
 }
